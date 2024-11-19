@@ -10,10 +10,10 @@ pipeline {
            stage('push ECR'){
             steps {
                 sh '''
-	aws ecr get-login-password --region us-west-2 | docker login --username AWS --password-stdin 144486164212.dkr.ecr.us-west-2.amazonaws.com
+	aws ecr get-login-password --region us-west-2 | docker login --username AWS --password-stdin 533266970461.dkr.ecr.us-west-2.amazonaws.com
            		    
 	docker tag devops:v${BUILD_NUMBER} 144486164212.dkr.ecr.us-west-2.amazonaws.com/talent/spring:v${BUILD_NUMBER}
-        docker push 144486164212.dkr.ecr.us-west-2.amazonaws.com/talent/spring:v${BUILD_NUMBER}
+        docker push 533266970461.dkr.ecr.us-west-2.amazonaws.com/talent/spring:v${BUILD_NUMBER}
 		   
        '''
             }
